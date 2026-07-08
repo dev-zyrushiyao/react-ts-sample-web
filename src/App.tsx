@@ -23,6 +23,8 @@ export default function MyApp() {
       <ul>{listOfProduct}</ul>
       <PrimaryButton count={count} onClick={handleClick} />
       <PrimaryButton count={count} onClick={handleClick} />
+      <PrimaryButton count={count} onClick={handleClick} />
+      <PrimaryButton count={count} onClick={handleClick} />
 
     </>
   );
