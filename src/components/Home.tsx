@@ -1,6 +1,7 @@
 import BlogList from "./BlogList";
 import "../index.css";
-import { useState, useEffect } from "react";
+
+import useFetch from "../custom-hook/useFetch";
 
 //type alias
 export type Blog = {
@@ -11,44 +12,21 @@ export type Blog = {
 };
 
 export default function Home() {
-  const [blogs, setBlogs] = useState<Blog[]>([
-    {
-      id: 1,
-      title: "Super Mario Bros 3",
-      content: "lorem ipsum...",
-      author: "Mario",
-    },
-    {
-      id: 2,
-      title: "Super Mario Bros Wonder",
-      content: "lorem ipsum...",
-      author: "Yoshi",
-    },
-    {
-      id: 3,
-      title: "Mario Party",
-      content: "lorem ipsum...",
-      author: "Peach",
-    },
-    {
-      id: 4,
-      title: "Super Mario RPG",
-      content: "lorem ipsum...",
-      author: "Mario",
-    },
-  ]);
+  const {data, isLoading, error} = useFetch<Blog[]>("http://localhost:8000/blogs");
 
-  useEffect(() => console.log(`USE EFFECT IS TRIGGERED `), [blogs]);
-
-  const handleDelete = (id: number): void => {
-    const newBlog = blogs.filter((blog) => blog.id !== id);
-    setBlogs(newBlog);
-  };
 
   return (
     <div>
       <h3>This is a Home Page</h3>
-      <BlogList blogs={blogs} handleDelete={handleDelete} />
+      {error && (
+        <div>
+          <label>
+            {error.name} : {error.message} - {error.stack}
+          </label>
+        </div>
+      )}
+      {isLoading && <div>Loading...</div>}
+      {data && <BlogList blogs={data} />}
     </div>
   );
 }
