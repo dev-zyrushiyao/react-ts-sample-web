@@ -1,4 +1,4 @@
-import './index.css';
+import '../index.css';
 
 export default function NavBar () {
     return <div className="nav-bar">
