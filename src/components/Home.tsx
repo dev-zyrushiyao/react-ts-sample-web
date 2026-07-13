@@ -12,8 +12,9 @@ export type Blog = {
 };
 
 export default function Home() {
-  const {data, isLoading, error} = useFetch<Blog[]>("http://localhost:8000/blogs");
-
+  const { data, isLoading, error } = useFetch<Blog[]>(
+    "http://localhost:8000/blogs",
+  );
 
   return (
     <div>
