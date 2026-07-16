@@ -1,22 +1,30 @@
+
+
 {
   "blogs": [
     {
-      "id": 1,
-      "title": "My First Blog",
-      "body": "This is a body content for the first blog",
+      "id" : 1,
+      "title": "The Magic of Super Mario RPG",
+      "content": "When Nintendo and Square Enix teamed up in 1996, they created an absolute masterpiece. This game completely transformed the Mushroom Kingdom into a rich, turn-based world filled with tactical button-timed attacks, unforgettable music, and quirky original characters like Geno and Mallow. It remains a timeless blueprint for tactical charm.",
       "author": "Yoshi"
     },
     {
-      "id": 2,
-      "title": "My Second Blog",
-      "body": "This is a body content for the second blog",
+      "id": "2",
+      "title": "Re-exploring Super Mario Odyssey",
+      "content": "Sandbox exploration reached peak perfection with Cappy's introduction. The ability to capture and control everything from a massive T-Rex to a standard Goomba turned every kingdom into a massive playground. It proved that Mario games can completely reinvent themselves while keeping their core joy intact.",
       "author": "Peach"
     },
     {
-      "id": 3,
-      "title": "My Third Blog",
-      "body": "This is a body content for the third blog",
+      "id": "3",
+      "title": "Why Hyrule Still Captivates Us",
+      "content": "From traditional dungeon-crawling puzzle paths to open-air survival freedom, Nintendo's premier adventure franchise sets the gold standard for world design. Every single valley, hidden korok leaf, and broken sword tells a story that makes stepping into Link's boots feel legendary.",
       "author": "Peach"
+    },
+    {
+      "title": "This is my fourth blog!",
+      "content": "I am currently learning react",
+      "author": "mario",
+      "id": "LHERmEtbF5U"
     }
   ]
 }

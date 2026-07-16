@@ -1,7 +1,5 @@
 import BlogList from "./BlogList";
-import "../index.css";
-
-import useFetch from "../custom-hook/useFetch";
+import useFetch from "../custom-hook/UseFetch";
 
 //type alias
 export type Blog = {
@@ -18,7 +16,6 @@ export default function Home() {
 
   return (
     <div>
-      <h3>This is a Home Page</h3>
       {error && (
         <div>
           <label>

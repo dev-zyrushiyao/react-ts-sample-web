@@ -18,10 +18,10 @@ export default function useFetch<T>(url: string) {
         setTimeout(async () => {
           await setData(data);
           setIsLoading(false);
-        }, 2000);
+        }, 500);
       })
       .catch((e) => {
-        if (e === "AbortError") {
+        if (e instanceof Error && e.name === "AbortError") {
           console.log("Fetch Aborted");
         } else {
           setError(e);

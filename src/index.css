@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px solid rgb(206, 198, 198);
+}
+
+.navbar h1 {
+    margin: 0;
+    white-space: nowrap;
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+}
+
+.navbar-links {
+    display: inline-flex;
+    justify-content: center;
+    gap: 100px;
+
+    font-family: 'Inter', sans-serif;
+    width: auto;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog-list a {
+    text-decoration: none;
+    display: block;
+}
+
+.blog-preview {
+    background-color: rgba(219, 217, 217, 0.212);
+    margin: 14px 0;
+    padding: 20px;
+    border-radius: 24px;
+}
+
+.blog-preview:hover {
+    background-color: rgba(211, 103, 70, 0.329);
+    box-shadow: 5px 10px 5px rgb(119, 119, 119);
+    transform: translateY(-4px);
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+}
+
+h3 {
+    color: black;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.2em;
+}
+
+.blog-preview p {
+    color: rgb(95, 83, 83);
+    font-family: 'Inter', sans-serif;
+}
+
+
+.blog-details h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+.blog-details p {
+    font-family: 'Inter', san-serif;
+    line-height: 50px;
+}
+
+.blog-details article {
+    padding: 24px 25%;
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    padding: 24px 25%;
+    gap: 20px;
+}
+
+form h2,
+label,
+input,
+select,
+button {
+    display: block;
+    font-family: 'Inter', sans-serif;
+}
+
+form input,
+form textarea,
+select {
+    width: 100%;
+    padding: 7px 4px;
+    box-sizing: border-box;
+
+}
+
+
+form textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+form button {
+    padding: 12px;
+    background-color: rgb(60, 134, 168);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: rgb(45, 105, 133);
+}

@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import type { Blog } from "./Home";
 
 interface BlogListProp {
@@ -7,12 +8,14 @@ interface BlogListProp {
 const BlogList = ({ blogs }: BlogListProp) => {
   return (
     <div className="blog-list">
-      <h1>All Blogs</h1>
+      <h2>All Blogs</h2>
       {blogs.map((blog) => (
-        <div className="blog-preview" key={blog.id}>
-          <h2>{blog.title}</h2>
-          <p>Author by {blog.author}</p>
-        </div>
+        <Link to={`/blogs/${blog.id}`} key={blog.id}>
+          <div className="blog-preview">
+            <h3>{blog.title}</h3>
+            <p>Author by {blog.author}</p>
+          </div>
+        </Link>
       ))}
     </div>
   );
